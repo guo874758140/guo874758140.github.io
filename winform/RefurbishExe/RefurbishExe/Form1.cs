@@ -24,10 +24,6 @@ namespace RefurbishExe
         void Form1_Load(object sender,EventArgs e)
         {
             var timeSpanceConfig = ConfigurationManager.AppSettings["timeSpan"];
-            if (timeSpanceConfig==null)
-            {
-                timeSpanceConfig = "10";
-            }
             this.textBox1.Text = timeSpanceConfig;
             var timeSpance =Convert.ToInt32(timeSpanceConfig) * 1000;//秒
             myTimer = new System.Timers.Timer(timeSpance);//定时周期2秒
